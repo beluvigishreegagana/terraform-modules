@@ -19,6 +19,12 @@ resource "azurerm_linux_web_app" "webapp" {
 
   site_config {
     always_on = true
+    application_stack {
+          java_version        = "8"
+          java_server         = "TOMCAT"  
+          java_server_version = "9.0"     
+        }
+
     
   }
   
